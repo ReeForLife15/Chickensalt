@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .header {
+            text-align: center;
+            background-color: #333; /* Background color for the header */
+            color: white; /* Default text color */
+            padding: 20px;
+        }
+
+        .highlight-yellow-orange {
+            color: #FFA500; /* Yellow-Orange color for "Chicken" */
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #888; /* Grey background color for buttons */
+            color: white; /* Text color for buttons */
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .text-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .text {
+            color: #333; /* Text color for displayed text */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <span class="highlight-yellow-orange">Chicken</span> and <span>Salt</span>
+        </h1>
+    </div>
+
+    <div class="button-container">
+        <button class="button" id="serverButton">Server</button>
+        <button class="button" id="statusButton">Server Status</button>
+        <button class="button" id="playersButton">Players</button>
+        <button class="button" id="aboutButton">About</button>
+    </div>
+
+    <div class="text-container">
+        <p class="text" id="displayText"></p>
+    </div>
+
+    <script>
+        const serverText = "The Chicken Salt SMP is a Minecraft server dedicated to a single friend group. It was made in late September of 2023 and has been running since then (as of 11/8).";
+        const statusText = "Server status missing (error code 0, missing input)";
+        const playersText = "Current Players: Hunter, Dragoncriton, ReeForLife, Lazyforlife, FredTheGuy.";
+        const aboutText = "Additional information about Chicken Salt.";
+
+        const displayText = document.getElementById("displayText");
+        const serverButton = document.getElementById("serverButton");
+        const statusButton = document.getElementById("statusButton");
+        const playersButton = document.getElementById("playersButton");
+        const aboutButton = document.getElementById("aboutButton");
+
+        serverButton.addEventListener("click", () => {
+            displayText.textContent = serverText;
+        });
+
+        statusButton.addEventListener("click", () => {
+            displayText.textContent = statusText;
+        });
+
+        playersButton.addEventListener("click", () => {
+            displayText.textContent = playersText;
+        });
+
+        aboutButton.addEventListener("click", () => {
+            displayText.textContent = aboutText;
+        });
+    </script>
+</body>
+</html>
